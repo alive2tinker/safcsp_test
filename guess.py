@@ -24,7 +24,11 @@ while keepPlaying:
     
     while True:
         try:
-            
+            reply = str(raw_input('would you like to try again? (y/n): ')).lower().strip()
+            if reply[0] == 'y':
+                keepPlaying = True
+            if reply[0] == 'n':
+                keepPlaying = False
         except Exception as err:
             print("wrong input: {}".format(err))
         else:
